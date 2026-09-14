@@ -1,0 +1,17 @@
+name = "esp32-checkin-backend"
+main = "src/index.js"
+compatibility_date = "2026-09-14"
+
+[assets]
+directory = "../web"
+binding = "ASSETS"
+run_worker_first = true
+
+[triggers]
+crons = ["15 2 * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "pdks-ble-pilot"
+database_id = "30aed14b-ccc1-463b-8013-0782c6c04c18"
+migrations_dir = "migrations"
